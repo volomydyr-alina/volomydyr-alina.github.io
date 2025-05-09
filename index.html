@@ -29,6 +29,10 @@
 					<h1 class="heading-4">Володимир &amp; Аліна</h1>
 					<img alt="" class="image-29" loading="lazy" src="https://cdn.prod.website-files.com/67c84629b7508d91d91910c9/67e01a6eda78afcaecbca91c_Line%203.svg" />
 					<h1 class="heading-4">25.06</h1>
+					<!-- Countdown container -->
+					<div class="text-block-4" class="countdown" id="countdown-container">
+						<div id="countdown"></div>
+					</div>
 					<div class="div-block-18">
                         <img 
                             alt=""
@@ -132,5 +136,28 @@
 				</div>
 			</div>
 		</div>
+		<script>
+			const countdown = () => {
+			  const eventDate = new Date('2025-06-25T12:30:00');
+			  const now = new Date();
+			  const diff = eventDate - now;
+		  
+			  if (diff <= 0) {
+				document.getElementById('countdown').innerHTML = "Час святкувати!";
+				return;
+			  }
+		  
+			  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+			  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+			  const minutes = Math.floor((diff / (1000 * 60)) % 60);
+			  const seconds = Math.floor((diff / 1000) % 60);
+		  
+			  document.getElementById('countdown').innerHTML = 
+				`${days} днів, ${hours} год, ${minutes} хв, ${seconds} сек`;
+			};
+		  
+			setInterval(countdown, 1000);
+			countdown();
+		  </script>
 	</body>
 </html>
