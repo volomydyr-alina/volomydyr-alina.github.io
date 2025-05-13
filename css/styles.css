@@ -263,7 +263,7 @@ html {
   }
   
   .w-button {
-    color: #fff;
+    color: #000000;
     line-height: inherit;
     cursor: pointer;
     background-color: #3898ec;
@@ -2058,7 +2058,7 @@ html {
     --Ñ„Ð¾Ð½: #f3efe4;
     --Ð½Ð°Ñ‚Ð¸ÑÐ½ÑƒÑ‚: #fffdf9;
     --Ñ‡ÐµÐºÐ±Ð¾ÐºÑ: #b19750;
-    --button: #8a744b;
+    --button: #b0bef2;
     --Ð½Ð°Ñ‚Ð¸ÑÐ½ÑƒÑ‚Ð¸Ð¹: var(--Ñ„Ð¾Ð½);
   }
   
@@ -2118,7 +2118,20 @@ html {
     font-weight: 400;
     line-height: 100px;
   }
-  
+
+  .paragraph2 {
+    text-align: center;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: auto;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    margin-top: 20px;
+    text-decoration: none;
+    display: flex;
+  }
+
   .paragraph {
     text-align: center;
     flex-flow: row;
@@ -2306,7 +2319,7 @@ html {
   
   .heading-4 {
     text-align: center;
-    font-family: Rabbits Elf, Verdana, sans-serif;
+    font-family: Montserrat, sans-serif;
     font-size: 120px;
     font-weight: 400;
     line-height: 150px;
@@ -2323,16 +2336,25 @@ html {
     width: 45%;
     height: 100%;
   }
-  
-  .text-block-4 {
+
+  .countdown {
     color: #000;
     text-align: center;
-    font-family: Montserrat, sans-serif;
+    font-family: 'CustomFont', sans-serif;
     font-size: 48px;
     font-weight: 500;
     line-height: 96px;
   }
-  
+
+  .text-block-4 {
+    color: #000;
+    text-align: center;
+    font-family: 'CustomFont', sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 96px;
+  }
+
   .div-block-7 {
     height: auto;
   }
@@ -2345,6 +2367,12 @@ html {
   }
   
   .image-12 {
+    width: 40%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .tecktonik {
     width: 40%;
     margin-top: 40px;
     margin-bottom: 40px;
@@ -2452,7 +2480,8 @@ html {
     outline-width: 2px;
     outline-style: solid;
     width: 50%;
-    margin-top: 10px;
+    margin-top: 0px;
+    margin-bottom: 10px;
     font-family: Montserrat, sans-serif;
     font-size: 24px;
     line-height: 36px;
@@ -2699,6 +2728,12 @@ html {
       line-height: 90px;
     }
   
+    .countdown {
+      margin-bottom: 10px;
+      font-size: 36px;
+      line-height: 60px;
+    }
+
     .text-block-4 {
       margin-bottom: 10px;
       font-size: 36px;
@@ -2709,8 +2744,13 @@ html {
       padding-left: 20px;
       padding-right: 20px;
     }
-  
+
     .image-12 {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .tecktonik {
       margin-top: 20px;
       margin-bottom: 20px;
     }
@@ -2887,16 +2927,25 @@ html {
     }
   
     .heading-4.rot {
-      font-family: Rabbits Elf, Verdana, sans-serif;
+      font-family: Montserrat, sans-serif;
       font-size: 90px;
     }
-  
+
+    .countdown {
+      font-size: 26px;
+      line-height: 36px;
+    }
+
     .text-block-4 {
       font-size: 26px;
       line-height: 36px;
     }
   
     .image-12 {
+      width: 50%;
+    }
+
+    .tecktonik {
       width: 50%;
     }
   
@@ -3451,8 +3500,8 @@ html {
       color: #000;
       text-align: center;
       width: auto;
-      font-family: Rabbits Elf, Verdana, sans-serif;
-      font-size: 50px;
+      font-family: Montserrat, sans-serif;
+      font-size: 35px;
       font-weight: 400;
     }
   
@@ -3474,7 +3523,25 @@ html {
       margin-top: 20px;
       margin-bottom: 10px;
     }
-  
+
+  @font-face {
+    font-family: 'Passions Conflict';
+    src: url('../fonts/PassionsConflictRUS-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+    .countdown {
+      color: #000;
+      text-align: center;
+      margin-bottom: 0;
+      font-family: 'Passions Conflict', sans-serif;
+      font-size: 48px;
+      font-weight: 500;
+      line-height: 32px;
+    }
+
     .text-block-4 {
       color: #000;
       text-align: center;
@@ -3513,6 +3580,12 @@ html {
     .image-12 {
       width: 80%;
       margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .tecktonik {
+      width: 60%;
+      margin-top: 0px;
       margin-bottom: 20px;
     }
   
@@ -3893,6 +3966,14 @@ html {
   @font-face {
     font-family: 'Kobzarks V 1 020';
     src: url('https://cdn.prod.website-files.com/67c84629b7508d91d91910c9/67d9a2d749f2c42432fce646_KobzarKS_v1-020.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'CustomFont';
+    src: url('../fonts/PassionsConflictRUS-Regular.otf') format('opentype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
